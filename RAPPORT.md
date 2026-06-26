@@ -88,20 +88,7 @@ disjoints → aucune *race condition*. Le code vérifie `np.allclose(seq, par)`.
 
 ## 5. Speedup mesuré (instruction 4)
 
-- **Nombre d'étudiants (N)** : 1 000 000
-- **Processeurs / threads (P)** : 1
-- **Temps séquentiel T_seq** : 1.5624 ms
-- **Temps parallèle T_par** : 1.4799 ms
-- **Speedup S = T_seq / T_par** : **1.0558**
-- **Résultats séquentiel == parallèle** : True
-- **Moyenne générale de la classe** : 9.9983 / 20
-
-**Détail du passage à l'échelle (benchmark) :**
-
-| Threads (P) | Temps (ms) | Speedup S | p (Amdahl) |
-|:-----------:|:----------:|:---------:|:----------:|
-| 1 | 1.334 | 1.0 | — |
-
+> Les mesures n'ont pas encore été produites. Lancez `python3 calcul_moyenne.py` puis `python3 generer_rapport.py`.
 
 
 ![Courbe de speedup](speedup.png)
@@ -168,6 +155,4 @@ python3 generer_rapport.py             # régénère ce rapport avec vos mesures
 
 ## 9. Dépôt du code (instruction 6)
 
-**Lien GitHub/GitLab :** https://github.com/<votre-compte>/tp-numba-moyenne
-
-*(À remplacer par votre URL réelle après le `git push` — voir `GUIDE_GIT.md`.)*
+**Lien GitHub :** https://github.com/rotchala71-alt/TP-Parallelisation-Numba

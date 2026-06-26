@@ -13,7 +13,7 @@ Usage : python3 generer_rapport.py
 import json
 import os
 
-GITHUB_URL = "https://github.com/<votre-compte>/tp-numba-moyenne"
+GITHUB_URL = "https://github.com/rotchala71-alt/TP-Parallelisation-Numba"
 
 
 def charger(fichier):
@@ -236,9 +236,7 @@ python3 generer_rapport.py             # régénère ce rapport avec vos mesures
 
 ## 9. Dépôt du code (instruction 6)
 
-**Lien GitHub/GitLab :** {GITHUB_URL}
-
-*(À remplacer par votre URL réelle après le `git push` — voir `GUIDE_GIT.md`.)*
+**Lien GitHub :** {GITHUB_URL}
 """
 
     with open("RAPPORT.md", "w", encoding="utf-8") as f:
