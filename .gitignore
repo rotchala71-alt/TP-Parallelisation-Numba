@@ -1,0 +1,6 @@
+etudiants.csv
+*.csv
+__pycache__/
+*.pyc
+*.html
+.numba_cache/

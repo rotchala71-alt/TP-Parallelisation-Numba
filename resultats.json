@@ -1,0 +1,17 @@
+{
+  "n_etudiants": 1000000,
+  "n_threads": 1,
+  "t_seq_ms": 1.5624,
+  "t_par_ms": 1.4799,
+  "speedup": 1.0558,
+  "p_parallelisable": null,
+  "speedup_max_theorique": null,
+  "resultats_identiques": true,
+  "moyenne_classe": 9.9983,
+  "coefficients": {
+    "maths": 5.0,
+    "physique": 4.0,
+    "anglais": 2.0,
+    "total": 11.0
+  }
+}

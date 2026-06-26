@@ -1,0 +1,11 @@
+{
+  "n_etudiants": 1000000,
+  "points": [
+    {
+      "threads": 1,
+      "temps_ms": 1.334,
+      "speedup": 1.0,
+      "p": null
+    }
+  ]
+}
