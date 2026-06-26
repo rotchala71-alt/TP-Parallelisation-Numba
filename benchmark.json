@@ -3,9 +3,27 @@
   "points": [
     {
       "threads": 1,
-      "temps_ms": 1.334,
+      "temps_ms": 5.2556,
       "speedup": 1.0,
       "p": null
+    },
+    {
+      "threads": 2,
+      "temps_ms": 3.7941,
+      "speedup": 1.3852,
+      "p": 0.5562
+    },
+    {
+      "threads": 4,
+      "temps_ms": 2.4421,
+      "speedup": 2.1521,
+      "p": 0.7138
+    },
+    {
+      "threads": 8,
+      "temps_ms": 2.6125,
+      "speedup": 2.0117,
+      "p": 0.5748
     }
   ]
 }

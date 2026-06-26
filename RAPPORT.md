@@ -88,7 +88,23 @@ disjoints → aucune *race condition*. Le code vérifie `np.allclose(seq, par)`.
 
 ## 5. Speedup mesuré (instruction 4)
 
-> Les mesures n'ont pas encore été produites. Lancez `python3 calcul_moyenne.py` puis `python3 generer_rapport.py`.
+- **Nombre d'étudiants (N)** : 1 000 000
+- **Processeurs / threads (P)** : 8
+- **Temps séquentiel T_seq** : 6.6777 ms
+- **Temps parallèle T_par** : 2.4433 ms
+- **Speedup S = T_seq / T_par** : **2.7331**
+- **Résultats séquentiel == parallèle** : True
+- **Moyenne générale de la classe** : 9.9983 / 20
+
+**Détail du passage à l'échelle (benchmark) :**
+
+| Threads (P) | Temps (ms) | Speedup S | p (Amdahl) |
+|:-----------:|:----------:|:---------:|:----------:|
+| 1 | 5.2556 | 1.0 | — |
+| 2 | 3.7941 | 1.3852 | 0.5562 |
+| 4 | 2.4421 | 2.1521 | 0.7138 |
+| 8 | 2.6125 | 2.0117 | 0.5748 |
+
 
 
 ![Courbe de speedup](speedup.png)
@@ -106,20 +122,15 @@ En inversant :
 
 > **p = P · (S − 1) / ( S · (P − 1) )**
 
-> ⚠️ **Limitation de l'environnement de mesure** : la machine utilisée n'expose qu'**un seul cœur** (P = 1). Le speedup parallèle ne peut donc pas y être mesuré (S ≈ 1) — c'est une limite **matérielle**, pas un défaut du code. Sur une machine multicœur, `calcul_moyenne.py` calcule automatiquement p et met à jour ce rapport.
-
-**Exemple de référence entièrement calculé (machine 4 cœurs)** :
-
-En supposant un speedup mesuré **S = 3.65** sur **P = 4** cœurs :
+À partir de la mesure réelle (**S = 2.7331** sur **P = 8** cœurs), on inverse la loi d'Amdahl :
 
 ```
 p = P*(S-1) / (S*(P-1))
-p = 4*(3.65-1) / (3.65*(4-1))
-p = 10.60 / 10.95
-p ≈ 0.9680   →   96.80 % parallélisable
+p = 8*(2.7331-1) / (2.7331*(8-1))
+p ≈ 0.7247   →   72.47 % parallélisable
 ```
 
-Speedup maximal théorique (P→∞) : `1/(1-p) ≈ 31.3`.
+Speedup maximal théorique (P→∞) : `1/(1-p) ≈ 3.63`.
 
 
 **Interprétation** : une valeur de *p* proche de 1 confirme le caractère
